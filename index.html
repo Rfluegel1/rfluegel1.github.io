@@ -1,0 +1,55 @@
+
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <h1>XKCD Password Generator</h1>
+    <div>
+      <label>Minimum Word Length</label>
+      <select id="minWordLength" required onchange="setMinWordLength()">
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+      </select>
+    </div>
+    <div>
+      <label>Maximum Word Length</label>
+      <select id="maxWordLength" required onchange="setMaxWordLength()">
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+      </select>
+    </div>
+    <div>
+      <label>Maximum Length of Password</label>
+      <input id="maxPasswordLength" type="text"></input>
+      <button>Set Maximim Passowrd Length</button>
+    </div>
+    <div>
+      <label>Alternate Hand Typing</label>
+      <input id="easyTyping" type="checkbox"></input>
+    </div>
+    <div>
+      <label>Number Substitutions</label>
+      <input id="numSub" type="checkbox"></input>
+    </div>
+    <button onClick="test()">Submit</button>
+    <table id="pwTable">
+    </table>
+    <script src="script.js">
+    </script>
+  </body>
+</html>
