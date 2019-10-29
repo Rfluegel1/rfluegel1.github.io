@@ -83,6 +83,7 @@ getPassword = function(){
 }
 
 test = function() {
+  for(var i=0; i < 10; i++){
   table = document.getElementById("pwTable");
   tr = document.createElement("tr");
   td1 = document.createElement("td");
@@ -120,4 +121,5 @@ test = function() {
   tr.appendChild(td4);
   tr.appendChild(td5);
   table.appendChild(tr);
+  }
 }
