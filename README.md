@@ -1,3 +1,3 @@
-# rfluegel1.github.io
+# minnehack-2020
 
-This is a password generator using the most common 1000 words.
+remeber to git this bread!!

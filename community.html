@@ -5,40 +5,21 @@
   <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/community.css">
 
-  <title>Your Fridge</title>
+  <title>Community Fridge</title>
 </head>
-
 <body>
-    <div class="navbar navbar-dark bg-dark d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 shadow-sm">
+    <div class="navbar navbar-dark bg-dark shadow-sm">
       <div class="container d-flex justify-content-between">
-        <a href="#" class="navbar-brand d-flex align-items-center my-0 mr-md-auto font-weight-normal">
+        <a href="#" class="navbar-brand d-flex align-items-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path fill-rule="evenodd" d="M10 13a3 3 0 100-6 3 3 0 000 6zm0 1a4 4 0 100-8 4 4 0 000 8zm0-12a.5.5 0 01.5.5v2a.5.5 0 01-1 0v-2A.5.5 0 0110 2zm0 13a.5.5 0 01.5.5v2a.5.5 0 01-1 0v-2a.5.5 0 01.5-.5zm8-5a.5.5 0 01-.5.5h-2a.5.5 0 010-1h2a.5.5 0 01.5.5zM5 10a.5.5 0 01-.5.5h-2a.5.5 0 010-1h2a.5.5 0 01.5.5zm10.657-5.657a.5.5 0 010 .707l-1.414 1.414a.5.5 0 11-.707-.707l1.414-1.414a.5.5 0 01.707 0zm-9.193 9.193a.5.5 0 010 .707L5.05 15.657a.5.5 0 01-.707-.707l1.414-1.414a.5.5 0 01.707 0zm9.193 2.121a.5.5 0 01-.707 0l-1.414-1.414a.5.5 0 01.707-.707l1.414 1.414a.5.5 0 010 .707zM6.464 6.464a.5.5 0 01-.707 0L4.343 5.05a.5.5 0 01.707-.707l1.414 1.414a.5.5 0 010 .707z" clip-rule="evenodd"></path></svg>
           <b>Expiration Mitigation</b><i> — waste not</i>
-          <h2 id="demo" style="margin-left:125px;font-size:18px;"></h2>
         </a>
-        <a class="btn btn-secondary my-2 my-md-0 mr-md-3" href="community.html" role="button">Go to Community Fridge »</a>
-        <div class="dropdown">
-          <button class="btn btn-info" align="right" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Login
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-
-                  <div class="form-group" style="margin:10px;">
-                      <label for="inputUsername">Username</label>
-                      <input type="text" class="form-control" id="inputUsername">
-                  </div>
-                  <div class="form-group" style="margin:10px;">
-                      <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control">
-                  </div>
-                  <button style="margin:10px;" class="btn btn-primary" onclick="login()">Submit</button>
-
-          </div>
-        </div>
+        <a class="btn btn-secondary" href="index.html" role="button">Go to Your Fridge »</a>
       </div>
     </div>
-  <div id="fridge_name"></div>
+
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -81,36 +62,29 @@
   <div id = "local_fridge" class='list-group'>
 
   </div>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase.js"></script>
 <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+   https://firebase.google.com/docs/web/setup#available-libraries -->
 
 <script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyBP_7RYNNrKUBQyly-M6wi98hEc9Q5xJ30",
-    authDomain: "expiration-mitigation.firebaseapp.com",
-    databaseURL: "https://expiration-mitigation.firebaseio.com",
-    projectId: "expiration-mitigation",
-    storageBucket: "expiration-mitigation.appspot.com",
-    messagingSenderId: "736127569229",
-    appId: "1:736127569229:web:6464aeb291e6f89c09bb04"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyBP_7RYNNrKUBQyly-M6wi98hEc9Q5xJ30",
+  authDomain: "expiration-mitigation.firebaseapp.com",
+  databaseURL: "https://expiration-mitigation.firebaseio.com",
+  projectId: "expiration-mitigation",
+  storageBucket: "expiration-mitigation.appspot.com",
+  messagingSenderId: "736127569229",
+  appId: "1:736127569229:web:6464aeb291e6f89c09bb04"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 </script>
-</body>
 <script src="food.js"></script>
 <script src="list-editor.js"></script>
-<script>
-    if (currentUser == "") {
-        document.getElementById("demo").innerHTML = "Hello, default User!";
-    } else {
-        document.getElementById("demo").innerHTML = "Hello, "+currentUser+"!";
-    }
-</script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
